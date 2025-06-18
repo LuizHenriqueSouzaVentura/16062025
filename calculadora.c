@@ -13,11 +13,11 @@ float multi(float a, float b){
 	return a*b;
 }
 
-float div(float a, float b){
+float divisao(float a, float b){
 	if (b != 0){
 		return a/b;
 	} else {
-		printf("Erro: impossível dividir!"\n);
+		printf("Erro: impossível dividir!\n");
 		return 0;
 	}
 }
@@ -52,8 +52,21 @@ int main(){
 				break;
 			case '/':
 				if (N2 != 0){
-				R = div(N1, N2);
+				R = divisao(N1, N2);
 				printf("Resultado: %.2f\n", R);
+				} else {
+					printf("Erro: impossível dividir por 0");
+				}
 				break;
+			default:
+				printf("Operação inválida!\n");
+		}
+		printf("Deseja fazer outro cálculo (s para sim, q para sair)? ");
+		scanf(" %c", &continuar);
+	}
+
+	printf("Programa encerrado.\n");
+	return 0;
+}
 
 
